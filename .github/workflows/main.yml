@@ -1,0 +1,38 @@
+name: Build User App APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.7.12'
+          channel: stable
+
+      - name: Get dependencies
+        working-directory: user_app
+        run: flutter pub get
+
+      - name: Build APK
+        working-directory: user_app
+        run: flutter build apk --release
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: user-app-apk
+          path: user_app/build/app/outputs/flutter-apk/app-release.apk
