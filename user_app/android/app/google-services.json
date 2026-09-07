@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "378153172514",
+    "project_id": "ameen-food-aabcd",
+    "storage_bucket": "ameen-food-aabcd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378153172514:android:38c7b5ef47d168c725d47b",
+        "android_client_info": {
+          "package_name": "com.harendra_prajapati_iphtech.user_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY77W542RKWNVIsNPZjZOp_53g0FAyAow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
